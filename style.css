@@ -1,0 +1,249 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+  background: linear-gradient(120deg, #f4f6f9, #dbeafe);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+.navbar {
+  background-color: #1e40af;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.nav-links a {
+  color: white;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+.nav-links a:hover {
+  color: #cbd5e1;
+}
+
+/* SIGNUP PAGE */
+.signup-container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.signup-form {
+  background: white;
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+}
+.signup-form h2 {
+  margin-bottom: 1rem;
+  color: #1e3a8a;
+}
+.signup-form input {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.signup-form button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  width: 100%;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+.signup-form button:hover {
+  background-color: #1e40af;
+}
+.signup-form .note {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+  text-align: center;
+}
+
+/* DASHBOARD LAYOUT */
+.dashboard {
+  display: flex;
+  flex: 1;
+}
+.sidebar {
+  background-color: #1e3a8a;
+  color: white;
+  width: 220px;
+  padding: 2rem 1rem;
+}
+.sidebar h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.sidebar ul {
+  list-style: none;
+}
+.sidebar ul li {
+  margin: 1rem 0;
+}
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+  display: block;
+  border-radius: 8px;
+}
+.sidebar ul li a:hover {
+  background-color: #3749b4;
+}
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  background-color: #f1f5f9;
+}
+.welcome {
+  margin-bottom: 2rem;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+ 
+.card h4 {
+  margin-bottom: 0.5rem;
+  color: #1e3a8a;
+}
+
+
+.project-list {
+  margin-top: 3rem;
+}
+.project-list h3 {
+  margin-bottom: 1rem;
+}
+.project-list table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.project-list th, .project-list td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+.status {
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: white;
+}
+.status.ongoing { background-color: #f59e0b; }
+.status.completed { background-color: #10b981; }
+.status.pending { background-color: #ef4444; }
+
+/* QUICK ACTIONS */
+.quick-actions {
+  margin-top: 3rem;
+}
+.quick-actions .actions {
+  display: flex;
+  gap: 1rem;
+  
+}
+.quick-actions button {
+  padding: 0.8rem 1.5rem;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.quick-actions button:hover {
+  background-color: #1e40af;
+}
+
+/* RECENT ACTIVITY */
+.recent-activity {
+  margin-top: 3rem;
+}
+.recent-activity ul {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  list-style-type: none;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+.recent-activity li {
+  margin-bottom: 0.5rem;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #1e40af;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+  }
+  .nav-links a {
+    margin-right: 1rem;
+    margin-top: 0.5rem;
+  }
+}
+/* Icon spacing */
+.navbar i,
+.sidebar i,
+.main-content h2 i,
+.card h4 i,
+.project-list h3 i,
+.quick-actions h3 i,
+.quick-actions button i,
+.recent-activity h3 i,
+.recent-activity li i,
+.footer i {
+  margin-right: 8px;
+}
